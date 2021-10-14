@@ -1,8 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:thanyarak/pages/signin_page.dart';
 import 'package:thanyarak/widget/news_list.dart';
 
 class OnHome extends StatefulWidget {
@@ -402,10 +404,11 @@ class homePage extends State<OnHome> {
                                       children: [
                                         GestureDetector(
                                           onTap: () {
-                                            ScaffoldMessenger.of(context)
-                                                .showSnackBar(const SnackBar(
-                                              content: Text('Tap'),
-                                            ));
+                                            Navigator.push(
+                                                context,
+                                                CupertinoPageRoute(
+                                                    builder: (context) =>
+                                                        SignInPage()));
                                           },
                                           child: Container(
                                             decoration: BoxDecoration(
